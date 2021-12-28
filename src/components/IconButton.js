@@ -2,7 +2,7 @@ import React from "react";
 import { Pressable } from "react-native";
 import styled from "styled-components/native";
 import PropTypes from "prop-types";
-import { images } from "../image";
+import { Images } from "../Image";
 
 const Icon = styled.Image`
   tint-color: ${({ theme, completed }) =>
@@ -28,7 +28,7 @@ IconButton.defaultProps = {
 };
 
 IconButton.propTypes = {
-  type: PropTypes.oneOf(Object.values(images)).isRequired,
+  type: PropTypes.oneOf(Object.values(Images)).isRequired,
   onPressOut: PropTypes.func,
   id: PropTypes.string,
   completed: PropTypes.bool,

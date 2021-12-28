@@ -21,6 +21,7 @@ export const Input = ({
   value,
   onChangeText,
   onSubmitEditing,
+  onBlur,
 }) => {
   const width = Dimensions.get("window").width;
 
@@ -36,6 +37,7 @@ export const Input = ({
       value={value}
       onChangeText={onChangeText}
       onSubmitEditing={onSubmitEditing}
+      onBlur={onBlur}
     />
   );
 };
@@ -45,4 +47,5 @@ Input.propTypes = {
   value: PropTypes.string.isRequired,
   onChangeText: PropTypes.func.isRequired,
   onSubmitEditing: PropTypes.func.isRequired,
+  onBlur:PropTypes.func.isRequired,
 };
