@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components/native";
 import PropTypes from "prop-types";
 import IconButton from "./IconButton";
-import { Images } from "../Image";
+import { Images } from "../image";
 import { Input } from "./Input";
 
 const Container = styled.View`
@@ -29,13 +29,13 @@ const Task = ({ item, deleteTask, toggleTask, updateTask }) => {
   const _handleUpdateButtonPress = () => {
     setIsEditing(true);
   };
-   
+
   const _onBlur = () => {
     if (isEditing) {
       setIsEditing(false);
       setText(item.text);
     }
-  }
+  };
 
   const _onSubmitEditing = () => {
     if (isEditing) {
@@ -46,9 +46,9 @@ const Task = ({ item, deleteTask, toggleTask, updateTask }) => {
   };
 
   return isEditing ? (
-     <Input
+    <Input
       value={text}
-      onChangeText={text => setText(text)}
+      onChangeText={(text) => setText(text)}
       onSubmitEditing={_onSubmitEditing}
       onBlur={_onBlur}
     />

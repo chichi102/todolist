@@ -2,7 +2,7 @@ import React from "react";
 import { Pressable } from "react-native";
 import styled from "styled-components/native";
 import PropTypes from "prop-types";
-import { Images } from "../Image";
+import { Images } from "../image";
 
 const Icon = styled.Image`
   tint-color: ${({ theme, completed }) =>
